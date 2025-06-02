@@ -1,15 +1,15 @@
 # 1st_task_netflix_data
-Lets import all important lidraries to perform data cleaning and aslo the data set that was downloaded from kaggel 
-Lets see the size of the dataset 
-So there are total of 8807 rows and 12 columns
-Lets Find out total null values for each column
-We cant delete the rows with null values in director as it make us to delete huge ammount of data insteaded fill it with unknown same with cast,country
-We has 10 null values in date_added but null values in release_year so we can just fill the null values with release year
-Findout the unique values in rating
-As 'TV-MA' is mode for rating fill null values with it
-Now do the same thing for duration
-AS it has large number of unique values it cant be filled with mode so just drop null values
-Now lets findout the duplicates in the dataset
-AS there are no duplicates in the data set no need to perform anything
-Lets find out the data type of each column 
-Lets convert the data type of date_added to Date time
+We began the data cleaning process by importing all the necessary libraries and loading the dataset downloaded from Kaggle. The dataset consists of 8,807 rows and 12 columns.
+
+We first checked for missing values in each column. Some columns, such as director, cast, and country, had a significant number of missing values. Since dropping these rows would result in a large loss of data, we chose to fill the missing values with the placeholder "Unknown".
+
+The date_added column had 10 missing values, while release_year had none. Therefore, we filled the missing values in date_added using the corresponding values from release_year, defaulting to January 1st of the release year.
+
+Next, we examined the rating column and identified its unique values. As 'TV-MA' was the most frequent rating (mode), we filled its missing values using this value.
+
+The duration column contained a wide range of unique values. Because it is not practical to impute missing values in this case, we chose to drop the rows with null values in duration.
+
+We then checked for duplicate entries in the dataset. As no duplicates were found, no further action was needed.
+
+Finally, we reviewed the data types of each column. The date_added column was converted to a proper datetime format to facilitate better time-based analysis.
+
