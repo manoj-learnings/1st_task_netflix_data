@@ -1,0 +1,103 @@
+Interview questions:
+1.What are missing values and how do you handle them?
+
+ans:Missing values are gaps or empty spots in your data where some information is missing. For example, if a movie’s 
+director name isn’t recorded, that cell is a missing value.
+
+It can be fixed using :
+
+Fill them in with a placeholder like "Unknown"  which I used for director column
+
+Remove rows or columns that have too many missing values which I used for duration column
+
+Estimate or predict the missing values based on other data which I used for Date_added  and rating column
+2.How do you treat duplicate records?
+
+ans:
+
+Duplicate records can be removed from the data maintaing only one
+3.Difference between dropna() and fillna() in Pandas?
+
+ans:
+
+dropna() — removes rows or columns that contain missing values (NaNs)
+
+fillna() — fills the missing values with a specific value you choose
+4.What is outlier treatment and why is it important?
+
+ans:
+
+Outlier treatment means identifying and handling data points that are very different from the rest of your data
+
+Outliers can distort your analysis and lead to wrong conclusions.
+
+5.Explain the process of standardizing data.
+
+Standardizing data means transforming your data so it has a mean (average) of 0 and a standard deviation of 1. This makes different features comparable and helps many algorithms work better.
+
+6.How do you handle inconsistent data formats (e.g., date/time)?
+
+Identify the inconsistencies:
+Check your data to find different formats (e.g., "2023-06-01", "06/01/2023", "June 1, 2023").
+
+Choose a standard format:
+Decide on one consistent format for the data, like YYYY-MM-DD.
+
+Convert all data to the standard format:
+Use tools or code to parse and convert the different formats into your chosen format.
+
+7.What are common data cleaning challenges?
+
+Here are some common data cleaning challenges explained simply:
+
+Missing Data:
+Some values are missing or blank, which can mess up analysis.
+
+Duplicate Records:
+Same data repeated multiple times, leading to biased results.
+
+Inconsistent Formats:
+Data like dates, phone numbers, or text might have different formats.
+
+Incorrect Data:
+Errors or typos in the data, like a wrong age or misspelled names.
+
+Outliers:
+Extreme values that don’t fit the pattern and can skew results.
+
+Noise:
+Irrelevant or random errors in the data.
+
+Data Integration Issues:
+Combining data from multiple sources can cause mismatches or conflicts.
+
+Unstructured Data:
+Data in messy formats like free text, making it hard to analyze.
+
+8.How can you check data quality?
+
+To check data quality, you can:
+
+Look for Missing Values:
+Use functions like isnull() or info() in Pandas to see if data is missing.
+
+Check for Duplicates:
+Use duplicated() to find repeated rows.
+
+Validate Data Types:
+Ensure columns have the correct data types (e.g., dates are dates, numbers are numbers).
+
+Examine Summary Statistics:
+Use describe() to spot unusual values or outliers.
+
+Check for Consistency:
+Verify if categorical data uses consistent labels (e.g., “Yes” vs “yes”).
+
+Visualize Data:
+Plot histograms, boxplots, or scatterplots to identify anomalies or patterns.
+
+Use Data Validation Rules:
+Apply rules like “age should be between 0 and 120” to spot errors.
+
+Cross-Check with External Sources:
+Compare data against trusted references if available.
